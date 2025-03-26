@@ -3,7 +3,7 @@
 ## What idea(s) do you have for your final project?
 
 - Stock Trading Platform - Simulate the selling and buying of stocks
-- Habit Tracker - Track habits, progress, and produce habits
+- Habit Tracker - Track habits, progress, and creates daily reminders
 - Recipe Generator - Takes in ingredients you have to create a recipe
 
 ## If you plan to collaborate with one or two classmates, what are their names?
