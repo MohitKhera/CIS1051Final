@@ -2,7 +2,7 @@
 
 ## What idea(s) do you have for your final project?
 
-- Stock trading Platform - Simulate the selling and buying of stocks
+- Stock Trading Platform - Simulate the selling and buying of stocks
 - Habit Tracker - Track habits, progress, and produce habits
 - Recipe Generator - Takes in ingredients you have to create a recipe
 
