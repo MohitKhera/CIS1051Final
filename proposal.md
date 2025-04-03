@@ -6,7 +6,7 @@
 
 ## In just a sentence or two, summarize your project. (E.g., "A website that lets you buy and sell stocks.")
 
-- I want to create a website that allows the user trade stocks. The webstie will incorporate a login page that takes them to another page that allows the user to buy and sell stocks of their choice.
+- I want to create a website that allows the user trade stocks. The website will incorporate a login page that takes them to another page that allows the user to buy and sell stocks of their choice.
 
 ## In a paragraph or more, detail your project. What will your software do? What features will it have? How will it be executed?
 
