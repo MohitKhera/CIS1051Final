@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import date
 import yfinance as yf
+import plotly.graph_objects as go
 
 if 'user' not in st.session_state:
     st.warning("Please log in first.")
@@ -31,5 +32,13 @@ else:
         st.header("Company Information")
         st.subheader(f'Name: {info["longName"]}')
         st.subheader(f'Market Cap: {info["marketCap"]}')
-        st.subheader(f'Sector: {info["sector"]}')
         st.subheader(f'Current Price: ${info["currentPrice"]}')
+        price_history = price_history(symbol)
+        st.header("Stock Price Chart")
+        price_history = price_history.rename_axis('Date').reset_index()
+        chart = go.Figure(data=[go.Candlestick(x=price_history['Date'],
+                                               open=price_history['Open'],
+                                               low=price_history['Low'],
+                                               high=price_history['High'],
+                                               close=price_history['Close'])])
+        st.plotly_chart(chart, use_container_width=True)

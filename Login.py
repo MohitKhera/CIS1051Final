@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-
 import streamlit as st
 import pyrebase
 from datetime import datetime
@@ -23,7 +22,7 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
 db = firebase.database()
 
-st.sidebar.title("App")
+st.sidebar.title("Welcome!")
 
 dropbox = st.sidebar.selectbox('Login/Signup', ['Login', 'Sign up'])
 email = st.sidebar.text_input("Please enter your email address")
@@ -46,9 +45,9 @@ if dropbox == 'Sign up':
               st.warning("This email is already registered.")
         else:
           user = auth.sign_in_with_email_and_password(email,password)
-          db.child(user['localId']).child("Handle").set(handle)
-          db.child(user['localId']).child("ID").set(user['localId'])
-          st.title("Welcome" + handle)
+          db.child(user['localId']).child("Handle").set(handle, user['idToken'])
+          db.child(user['localId']).child("ID").set(user['localId'], user['idToken'])
+          st.title("Welcome " + handle)
           st.info("Please Login")
 if dropbox == 'Login':
     login = st.sidebar.button('Login')
